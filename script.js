@@ -18,10 +18,6 @@ let scores, currentScore, activePlayer, playing;
 score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add('hidden');
-// const scores = [0, 0];
-// let currentScore = 0;
-// let activePlayer = 0;
-// let playing = true;
 
 const init = function () {
   score0El.textContent = 0;
@@ -64,7 +60,6 @@ btnRoll.addEventListener('click', function () {
       currentScore += dice;
       document.getElementById(`current--${activePlayer}`).textContent =
         currentScore;
-      //current0El.textContent = currentScore;
     } else {
       switchPlayer();
     }
@@ -76,8 +71,6 @@ btnHold.addEventListener('click', function () {
     // 1. Add current score to active player's score
 
     scores[activePlayer] += currentScore;
-
-    //scores[1] = scores[1] + currentScore;
 
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
